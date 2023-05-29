@@ -1,0 +1,15 @@
+<% for flat in @flats %>
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= link_to flat.name, flat_path(flat) %></h2>
+      <h3><%= flat.address %>
+      <p><%= flat.description %></p>
+      <p><strong>Max number of guests: </strong><%= flat.number_of_guests %></p>
+    </div>
+    <h2 class="card-trip-pricing">€<%= flat.price_per_night %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+<% end %>
